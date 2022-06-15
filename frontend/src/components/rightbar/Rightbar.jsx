@@ -250,10 +250,10 @@ export default function Rightbar({ user }) {
       <>
         <div className="AdContainer">
           <span className="AdText">
-            <b>Connect</b> friend all around the world on <b>ThaiSonSocial</b>
+            <b>Connect</b> Ăn sập Hà Nội với <b>Aplusreviewfood</b>
           </span>
         </div>
-        <img className="rightbarAd" src= {PF + "layout/ConnectFriend.jpg"} alt="" />
+        <img className="rightbarAd" src= {PF + "layout/cute-cartoon-food-16793986.jpg"} alt="" />
       </>
     );
   };

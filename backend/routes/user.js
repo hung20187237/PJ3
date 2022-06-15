@@ -55,7 +55,15 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//get all user
+  router.get("/all/all/all", async (req, res) => {
+    try {
+      const user = await User.find();
+      res.status(200).json(user);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 //get followings
 router.get("/followings/:id", async (req, res) => {
   try {

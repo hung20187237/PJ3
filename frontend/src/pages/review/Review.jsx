@@ -15,6 +15,7 @@ export default function Review() {
   const { user } = useContext(Context);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const desc = useRef();
+  const title = useRef();
   const [file, setFile] = useState(null);
   const stars = Array(5).fill(0);
   const [currentValue, setCurrentValue] = useState(0);
@@ -25,6 +26,7 @@ export default function Review() {
     const newPost = {
       userId: user._id,
       desc: desc.current.value,
+      title: title.current.value
     };
     if (file) {
       const data = new FormData();
