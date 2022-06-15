@@ -7,6 +7,9 @@ import { Context } from "../../context/Context";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import SendIcon from '@mui/icons-material/Send';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import TextRating from "../star/star";
+
 
 export default function Post({ post }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -149,9 +152,17 @@ export default function Post({ post }) {
                 }
                 alt=""
               />
+              
             </Link>
-            <span className="postUsername">{user.username}</span>
-            <span className="postDate">{format(post.createdAt)}</span>
+            <div >
+              <div>
+                <span className="postUsername">{user.username}</span>
+                <span className="postDate">{format(post.createdAt)}</span>
+                <ArrowRightIcon/>
+                <span className="postTitle">Cheka Foods</span>
+              </div>
+                <TextRating/>
+            </div>
           </div>
           <div className="postTopRight">
             {post.userId == currentUser._id ? <DeleteForeverIcon htmlColor="red" onClick={handlePostDelete}/>: null}
