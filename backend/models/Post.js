@@ -23,6 +23,9 @@ const PostSchema = new mongoose.Schema(
     },
     tag: {
       type: String,
+    },
+    rating: {
+      type: Number, 
     }
   },
   { timestamps: true }
